@@ -1,6 +1,8 @@
-CREATE TABLE planets (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    description TEXT,
-    image TEXT
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+  id SERIAL NOT NULL PRIMARY KEY,
+  username TEXT NOT NULL UNIQUE,
+  password TEXT NOT NULL,
+  token TEXT
 );
